@@ -3,9 +3,7 @@ This is a gnome shell extension that adds a VPN connection button to your taskba
 When the user clicks on it, the extension will execute a script that establishes e.g. a VPN connection.  
 
 # Goal
-This project primarily deals with creating a VPN connection, but this is not necessary. In general, a button is created on the taskbar and when clicked, a script is started.  
-However, with some modifications, it is pretty easy to start a different application (it doesn't have to be a VPN connection).  
-Or with other words. **The goal of this project is to create a button on the taskbar that executes a script when clicked.**  
+This project primarily deals with creating a VPN connection, but this is not necessary. In general, a button is created on the taskbar and when clicked, a script is started. However, with some modifications, it is pretty easy to start a different application (it doesn't have to be a VPN connection). Or with other words. **The goal of this project is to create a button on the taskbar that executes a script when clicked.** 
 Thus feel free to modify the code to your own needs.
 
 <div>
