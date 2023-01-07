@@ -9,10 +9,10 @@ Or with other words. **The goal of this project is to create a button on the tas
 Thus feel free to modify the code to your own needs.
 
 <div>
-<img src="img/git/Screenshot_1.png"><br/>
-<img src="img/git/Screenshot_2.png" style="margin-top:7px"><br/>
-<img src="img/git/Screenshot_3.png" style="margin-top:7px"><br/>
-<img src="img/git/Screenshot_4.png" style="margin-top:7px"><br/>><br/>
+<img src="img/git/Screenshot_1.png" style="margin:7px auto 0 auto; widht:750px; display:block"><br/>
+<img src="img/git/Screenshot_2.png" style="margin:7px auto 0 auto; widht:750px; display:block"><br/>
+<img src="img/git/Screenshot_3.png" style="margin:7px auto 0 auto; widht:750px; display:block"><br/>
+<img src="img/git/Screenshot_4.png" style="margin:7px auto 0 auto; widht:750px; display:block"><br/>><br/>
 </div>
 
 # Pre-requisites
