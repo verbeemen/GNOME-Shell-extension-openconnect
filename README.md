@@ -38,7 +38,7 @@ Thus feel free to modify the code to your own needs.
     ```
 
     **Result:**   
-    -  When the user with username: <username> executes the script, (s)he won't be prompted for a password anymore.   
+    -  When the user with username: `<username>` executes the script, (s)he won't be prompted for a password anymore.   
        <br>
 
  1. Add `/usr/bin/pkill --signal SIGINT openconnect` to the sudoers file.  
@@ -66,7 +66,7 @@ Thus feel free to modify the code to your own needs.
     <username> ALL=(ALL) NOPASSWD: KILL_OPENCONNECT
     ```
     **Result:**   
-    -  When the user with username: <username> executes the above command, (s)he won't be prompted for a password anymore.
+    -  When the user with username: `<username>` executes the above command, (s)he won't be prompted for a password anymore.
        <br>
 
 1. Restart GNOME.  
