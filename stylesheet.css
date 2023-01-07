@@ -1,0 +1,14 @@
+
+.icon_disconnected {
+    background-image: url("img/disconnected.svg");
+    background-size: 40px;
+    height: 20px;
+    width: 40px;
+}
+
+.icon_connected {
+    background-image: url("img/connected.svg");
+    background-size: 40px;
+    height: 20px;
+    width: 40px;
+}
