@@ -1,4 +1,4 @@
-# GNOME (<=4.4) Shell Extension - VPN Connection Button
+# GNOME (<=44) Shell Extension - VPN Connection Button
 (Gnome 44 and older is not supported anymore.)
 This is a gnome shell extension that adds a VPN connection button to your taskbar.  
 When the user clicks on it, the extension will execute a script that establishes e.g. a VPN connection.  
