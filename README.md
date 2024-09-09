@@ -1,10 +1,14 @@
-# GNOME Shell Extension - VPN Connection Button
-This is a gnome shell extension that adds a VPN connection button to your taskbar.  
-When the user clicks on it, the extension will execute a script that establishes e.g. a VPN connection.  
+# GNOME (+46) Shell Extension - VPN Connection Button
+This GNOME Shell extension adds a VPN connection button to your taskbar.
+When the user clicks it, the extension executes a script to establish a VPN connection or perform another action.
 
 # Goal
-This project primarily deals with creating a VPN connection, but this is not necessary. In general, a button is created on the taskbar and when clicked, a script is started. However, with some modifications, it is pretty easy to start a different application (it doesn't have to be a VPN connection). Or with other words. **The goal of this project is to create a button on the taskbar that executes a script when clicked.** 
-Thus feel free to modify the code to your own needs.
+The primary focus of this project is to create a VPN connection, but this is optional.  
+In general, the extension creates a button on the taskbar that, when clicked, executes a script. With minor modifications,  
+it’s easy to configure the button to start a different application (it doesn’t have to be related to VPN).
+In other words,  
+**the goal of this project is to create a taskbar button that executes a script when clicked.**  
+Feel free to modify the code to suit your needs.
 
 <div>
 <img src="img/git/Screenshot_1.png" style="margin:7px auto 0 auto; widht:750px; display:block"><br/>
@@ -13,16 +17,18 @@ Thus feel free to modify the code to your own needs.
 <img src="img/git/Screenshot_4.png" style="margin:7px auto 0 auto; widht:750px; display:block"><br/><br/>
 </div>
 
-# Pre-requisites
- 1. A script that will be executed when the button is clicked.   
-  In this example, we'll use the following script: `my_vpn_connector.sh`.  
-  What this script does is, it establishes a VPN connection using the _openconnect library_.
 
- 1. Add the my_vpn_connector.sh script to the sudoers file.  
-    Unfortunately, the `my_vpn_connector.sh` script should be executed as a sudo user.  
-    This means that we'll be prompted for a password when we execute the script.  
-    To avoid this, we can add the script to the *sudoers* file in such a way  
-    that we don't have to enter a password when executing the next command:
+# Pre-requisites
+ 1. A script to be executed when the button is clicked  
+   In this example, we’ll use the script `my_vpn_connector.sh`.  
+   This script establishes a VPN connection using the _openconnect library_.  
+  
+ 1. Add the `my_vpn_connector.sh` script to the sudoers file  
+   The `my_vpn_connector.sh` script requires execution with sudo privileges.  
+   By default, this means you'll be prompted for a password when running the script.  
+   To bypass this and avoid entering a password each time, you can configure the sudoers file to allow passwordless execution of the script.  
+
+
     ```shell
     sudo /home/<username>/my_vpn_connector.sh
     ```
@@ -78,7 +84,7 @@ Thus feel free to modify the code to your own needs.
     (Note that this folder name should be exactly the same as the project names in the metadata.json file)   
  1. Download the extension files into the folder that you created in the previous step.  
     1. Your folder structure should look like this:
-        ```
+        ```shell
          - vpn@openconnect.com
             - img
               - icon_connected.svg
@@ -86,6 +92,7 @@ Thus feel free to modify the code to your own needs.
             - extension.js
             - metadata.json
             - stylesheet.css
+         ```
  1. ! Check if the `name` and `uuid` fields in the `metadata.json` file are the same as your specified folder name.
  1. Edit the `extension.js` file and change the `PATH_SSH_SCRIPT` variable to the path of the script that you want to execute when the button is clicked.    
     (Note that the script should be executable)
@@ -112,6 +119,10 @@ extra:
 To debug the extension, open a terminal and run the following command:
 ```shell
 journalctl -f -o cat /usr/bin/gnome-shell
+```
+Or even better
+```shell
+env MUTTER_DEBUG_DUMMY_MODE_SPECS=1920x1080 dbus-run-session -- gnome-shell --nested --wayland
 ```
 ## Troubleshooting
 If you encounter any issues with the extension, make sure that you have properly added the necessary scripts to the sudoers file as described in the Prerequisites section. Additionally, try restarting Gnome or your machine to see if that resolves the issue.

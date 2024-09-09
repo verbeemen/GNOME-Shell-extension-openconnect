@@ -3,9 +3,6 @@
 	"description": "This extension allows you to easily connect to your VPN from the Gnome Shell.",
 	"uuid": "vpn@openconnect.com",
 	"shell-version": [
-		"42",
-		"43",
-		"44",
 		"45",
 		"46",
 		"47",
@@ -20,5 +17,5 @@
 	"dependencies": [
 		"openconnect"
 	],
-	"version": 1
+	"version": 2
 }
