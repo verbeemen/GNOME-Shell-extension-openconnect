@@ -29,7 +29,7 @@ Feel free to modify the code to suit your needs.
    To bypass this and avoid entering a password each time, you can configure the sudoers file to allow passwordless execution of the script.  
 
 
-    ```shell
+    ```shell 
     sudo /home/<username>/my_vpn_connector.sh
     ```
 
